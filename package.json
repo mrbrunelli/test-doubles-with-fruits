@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0",
+    "test": "jest --runInBand --verbose --passWithNoTests",
+    "lint": "eslint --ignore-path .gitignore --ext .js . --fix",
     "prepare": "husky install"
   },
   "keywords": [],
@@ -15,6 +16,14 @@
     "eslint-plugin-prettier": "^4.0.0",
     "git-commit-msg-linter": "^4.0.7",
     "husky": "^7.0.0",
+    "jest": "^27.4.7",
+    "lint-staged": "^12.3.1",
     "prettier": "^2.5.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn lint",
+      "yarn test"
+    ]
   }
 }
