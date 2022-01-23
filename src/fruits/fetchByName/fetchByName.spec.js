@@ -12,6 +12,7 @@ describe('fetchByName', () => {
     const { sut } = makeSut()
     const spy = jest.spyOn(fruits, 'fetchByName')
     sut.fetchByName('banana')
+    expect(spy).toHaveBeenCalledTimes(1)
     expect(spy).toHaveBeenCalledWith('banana')
   })
 })
