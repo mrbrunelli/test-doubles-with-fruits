@@ -11,8 +11,8 @@ describe('fetchByName', () => {
   test('should calls fetchByName with correctly params', async () => {
     const { sut } = makeSut()
     const spy = jest.spyOn(fruits, 'fetchByName')
-    sut.fetchByName('banana')
+    sut.fetchByName('valid fruit name')
     expect(spy).toHaveBeenCalledTimes(1)
-    expect(spy).toHaveBeenCalledWith('banana')
+    expect(spy).toHaveBeenCalledWith('valid fruit name')
   })
 })
