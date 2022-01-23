@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --runInBand --verbose --passWithNoTests",
+    "test:ci": "jest --runInBand --silent",
     "lint": "eslint --ignore-path .gitignore --ext .js . --fix",
     "prepare": "husky install"
   },
