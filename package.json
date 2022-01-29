@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node ./src/main.js",
     "test": "jest --runInBand --verbose --passWithNoTests",
     "test:ci": "jest --runInBand --silent",
     "lint": "eslint --ignore-path .gitignore --ext .js . --fix",
