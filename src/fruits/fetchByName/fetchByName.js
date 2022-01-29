@@ -1,10 +1,11 @@
 class FetchByName {
-  constructor({ httpService }) {
+  constructor({ httpService, baseUrl }) {
     this.http = httpService
+    this.baseUrl = baseUrl
   }
 
   async handle(name) {
-    const response = await this.http.get(`https://www.fruityvice.com/api/fruit/${name}`)
+    const response = await this.http.get(`${this.baseUrl}/${name}`)
     return response.data
   }
 }
