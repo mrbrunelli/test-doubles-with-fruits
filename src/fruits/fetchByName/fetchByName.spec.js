@@ -24,12 +24,16 @@ const makeHttpService = () => {
   return new HttpServiceStub()
 }
 
+const makeBaseUrl = () => 'https://valid-base-url'
+
 const makeSut = () => {
   const httpServiceStub = makeHttpService()
-  const sut = new FetchByName({ httpService: httpServiceStub })
+  const baseUrlStub = makeBaseUrl()
+  const sut = new FetchByName({ httpService: httpServiceStub, baseUrl: baseUrlStub })
   return {
     sut,
     httpServiceStub,
+    baseUrlStub,
   }
 }
 
@@ -59,5 +63,13 @@ describe('FetchByName', () => {
         sugar: 1,
       },
     })
+  })
+
+  test('should calls httpService with correctly params', async () => {
+    const { sut, httpServiceStub, baseUrlStub } = makeSut()
+    const spy = jest.spyOn(httpServiceStub, 'get')
+    await sut.handle('valid fruit name')
+    expect(spy).toHaveBeenCalledTimes(1)
+    expect(spy).toHaveBeenCalledWith(`${baseUrlStub}/valid fruit name`)
   })
 })
