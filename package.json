@@ -28,5 +28,8 @@
       "yarn lint",
       "yarn test"
     ]
+  },
+  "dependencies": {
+    "axios": "^0.25.0"
   }
 }
