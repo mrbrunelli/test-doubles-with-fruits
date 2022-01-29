@@ -10,4 +10,6 @@ class FetchByName {
   }
 }
 
-module.exports = FetchByName
+module.exports = {
+  FetchByName,
+}

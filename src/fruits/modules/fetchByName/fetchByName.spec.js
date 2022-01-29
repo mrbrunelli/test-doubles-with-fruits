@@ -1,4 +1,4 @@
-const FetchByName = require('./fetchByName')
+const { FetchByName } = require('./fetchByName')
 
 const makeHttpService = () => {
   class HttpServiceStub {
