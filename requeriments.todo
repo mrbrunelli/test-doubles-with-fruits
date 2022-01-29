@@ -1,0 +1,3 @@
+[x] - Make FetchByName fruit service
+[x] - Make FetchByName fruit unit tests
+[ ] - Make FetchByName fruit integration tests
