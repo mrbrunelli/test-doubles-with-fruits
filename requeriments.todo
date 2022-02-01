@@ -1,3 +1,6 @@
 [x] - Make FetchByName fruit service
 [x] - Make FetchByName fruit unit tests
 [ ] - Make FetchByName fruit integration tests
+[ ] - Make FetchAll fruit service
+[ ] - Make FetchAll fruit unit tests
+[ ] - Make FetchAll fruit integration tests
