@@ -3,7 +3,7 @@ const { FetchByName } = require('./fetchByName')
 const makeHttpService = () => {
   class HttpServiceStub {
     get() {
-      return {
+      return Promise.resolve({
         data: {
           genus: 'valid genus',
           name: 'valid fruit name',
@@ -18,7 +18,7 @@ const makeHttpService = () => {
             sugar: 1,
           },
         },
-      }
+      })
     }
   }
   return new HttpServiceStub()
